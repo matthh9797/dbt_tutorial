@@ -48,9 +48,27 @@ dbt_tutorial:
 
 This file is located in a hidden folder `user/.dbt/profiles.yml`. 
 
+## DBT project layout
 
+Note in this section I am using ideas from this great article how to layout DBT projects: [How to structure DBT projects](https://docs.getdbt.com/guides/best-practices/how-we-structure/1-guide-overview). I would recommend reading this after this tutorial.
 
+To get started with DBT you can start to build up your models in the `models/` directory. Create 3 new models with a schema.yml file in each:
+ - staging: For tidying up datasources (e.g. renaming, simple transformations, filtering)
+ - intermediate: For complex transformations (e.g. joins, aggregations)
+ - marts: For final tables
 
+Now update the dbt_project.yml. Under models add the default materialization in each section. This tells DBT how SQL scripts in each section will be materialized.
+
+```
+models:
+  dbt_tutorial:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
+```
 
 
 
