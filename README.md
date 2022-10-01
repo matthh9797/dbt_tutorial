@@ -70,6 +70,10 @@ models:
       +materialized: table
 ```
 
+## Staging
+
+Staging is for cleaning up the data sources into a consistent format. You should group logic within here by source (e.g. keep all noaa_tsunami tables in here).
+
 
 
 

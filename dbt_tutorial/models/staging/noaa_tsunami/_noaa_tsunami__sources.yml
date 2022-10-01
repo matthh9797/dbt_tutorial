@@ -1,0 +1,9 @@
+sources:
+
+  - name: noaa_tsunami
+    description: "{{ doc('_noaa_tsunami___docs') }}" 
+    tables:
+      - name: historical_source_event
+        description: "Historical source tsunami events"
+      - name: historical_runups
+        description: "Run up events linked to a source tsunami"
