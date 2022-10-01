@@ -76,4 +76,11 @@ Staging is for cleaning up the data sources into a consistent format. You should
 
 
 
+To take a look at the dbt docs run:
+
+```
+dbt docs generate
+dbt docs serve
+```
+
 
