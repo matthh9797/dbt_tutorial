@@ -1,0 +1,1 @@
+select * from {{ ref('int_source_and_runups_joined') }}
