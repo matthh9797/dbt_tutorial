@@ -1,0 +1,1 @@
+{% macro fillnull_0(column_name) %} if ({{ column_name }} is null, 0, {{ column_name }}) {% endmacro %}
